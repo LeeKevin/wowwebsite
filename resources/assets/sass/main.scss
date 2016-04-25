@@ -1,0 +1,130 @@
+@import "vars/variables";
+
+* {
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+body {
+  font-family: $body-font;
+  font-size: 16px;
+  color: $body-color;
+  background-color: #666;
+  padding: 0;
+  margin: 0;
+}
+
+@import "responsive";
+@import "header";
+@import "footer";
+
+h1, h2 {
+  font-family: "Serifa", serif;
+}
+
+.hero {
+  width: 100%;
+  background: url('../images/map.svg') no-repeat center 60%;
+  background-size: cover;
+  position: relative;
+
+  .content {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Serifa", serif;
+  }
+
+  .arrow {
+    display: block;
+    font-size: .75em;
+    color: $blue;
+    background: url('../images/down-arrow.png') no-repeat center;
+    background-size: auto 100%;
+    width: 100%;
+    height: .5em;
+  }
+}
+
+.about-us, .contact-us {
+  width: 100%;
+  position: relative;
+}
+
+.about-us {
+  background: $white-background;
+
+  .content {
+    display: flex;
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  .graphic {
+    text-align: center;
+  }
+
+  .about-us-content {
+    text-align: left;
+    align-items: center;
+    position: relative;
+    display: flex;
+    line-height: 1.5em;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.contact-us {
+  background-color: $blue;
+  color: $white-background;
+  text-align: center;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    background-image: url('../images/cream-pixels.png');
+    background-size: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: invert(100%);
+    opacity: .75;
+    z-index: -1;
+  }
+
+  .content {
+    z-index: 1;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+
+  small {
+    display: block;
+    font-size: 1em;
+  }
+
+  .contact-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 2em;
+    border-radius: .3em;
+    background: $white-background;
+    color: $blue;
+    margin: 1em 0;
+    font-size: 1.25em;
+    font-family: "Serifa", serif;
+  }
+}

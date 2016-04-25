@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <title>WOW Global Solutions Inc.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+<body>
+<header id="header">
+    <div class="content">
+        <a class="logo" title="WOW Global Solutions Inc."></a>
+    </div>
+</header>
+<main id="site-content" role="main">
+    <section class="hero">
+        <div class="content">
+            Building Connections
+            <a class="arrow" id="arrow"></a>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="content">
+            <div class="graphic">
+                <img src="images/what-is-wow-illustration.png" alt="What is WOW?"/>
+            </div>
+            <div class="about-us-content">
+
+                <div>
+                    <h2>What is WOW?</h2>
+
+                    <p>
+                        WOW is an integrated ERP system connecting workers, Service Providers and
+                        Producers throughout the Oil & Gas industry. WOW ERP system enhances the
+                        infrastructure for Oil & Gas Producers and Service Providers by reducing
+                        redundancy and increasing productivity in daily business operations (i.e. HR,
+                        Safety, Accounting, Engineering, Project Management and Quality Assurance).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-us">
+        <div class="content">
+            <h2>Coming 2017</h2>
+            <small>Please contact us if you have any questions or comments.</small>
+
+            <a class="contact-button" href="mailto:placeholder@wowglobal.com" title="Contact Us">Contact Us</a>
+        </div>
+    </section>
+</main>
+<footer id="footer">
+    <a href="#privacy" title="Privacy Policy">Privacy Policy</a>
+    <a href="#terms" title="Terms & Conditions">Terms & Conditions</a>
+</footer>
+<script type="text/javascript">
+    var smoothScroll = function (target, duration) {
+        var scrollContainer = target;
+        do { //find scroll container
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do { //find the top of target relatively to the container
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        var start = Date.now();
+
+        function min(a, b) {
+            return a < b ? a : b;
+        }
+
+        var initialPosition = scrollContainer.scrollTop;
+        var scrollIncrement = function () {
+            var current = Date.now(),
+                    elapsed = min(1, (current - start) / duration),
+                    ease = elapsed < 0.5 ? 2 * elapsed * elapsed : -1 + (4 - 2 * elapsed) * elapsed;
+
+            scrollContainer.scrollTop = (ease * (targetY - initialPosition)) + initialPosition;
+
+            if (scrollContainer.scrollTop >= targetY || document.body.scrollHeight == document.body.scrollTop + window.innerHeight || elapsed == 1) return;
+            requestAnimationFrame(scrollIncrement);
+        };
+        scrollIncrement();
+    };
+    var scrollButton = document.getElementById("arrow");
+    scrollButton.onclick = function () {
+        smoothScroll(scrollButton, 500);
+    };
+
+</script>
+</body>
+</html>

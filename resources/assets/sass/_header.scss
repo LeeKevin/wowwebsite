@@ -1,0 +1,14 @@
+header, #header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  top: 1.5em;
+  z-index: 1000;
+}
+
+.logo {
+  width: 125px;
+  height: 60px;
+  display: inline-block;
+  background: url('../images/WOW_cmyk.svg') no-repeat;
+}

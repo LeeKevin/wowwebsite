@@ -1,0 +1,8 @@
+{
+  "name": "wowglobalsite",
+  "version": "0.0.0",
+  "author": "",
+  "dependencies": {
+    "gulp": "~3.9.1"
+  }
+}
