@@ -1,0 +1,2 @@
+require('./scroll')();
+require('./contact')();

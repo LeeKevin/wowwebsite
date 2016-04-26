@@ -1,0 +1,6 @@
+host: <smtp mail server>
+port: 465
+username: <username>
+password: <password>
+sender: info@wowglobalsolutions.com
+security: ssl
