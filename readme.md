@@ -9,3 +9,5 @@ gulp --production
 ```
 
 Point web server to the generated `public` directory.
+
+Update `services/config/mail.yml` with valid SMTP server settings.
