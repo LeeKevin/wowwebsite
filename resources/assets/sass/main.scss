@@ -13,6 +13,10 @@ body {
   background-color: #666;
   padding: 0;
   margin: 0;
+
+  .loading {
+    cursor: wait !important;
+  }
 }
 
 @import "responsive";
@@ -46,6 +50,7 @@ h1, h2 {
     background-size: auto 100%;
     width: 100%;
     height: .5em;
+    cursor: pointer;
   }
 }
 
@@ -126,5 +131,69 @@ h1, h2 {
     margin: 1em 0;
     font-size: 1.25em;
     font-family: "Serifa", serif;
+    cursor: pointer;
+  }
+}
+
+.contact-form {
+  position: relative;
+  width: 500px;
+  display: block;
+  margin: 1em auto;
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+    padding: .5em 1em;
+    font-family: $body-font;
+    border-radius: .3em;
+    outline: none;
+    border: transparent 2px solid;
+    background: $dark-blue-background;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: $white-background;
+
+    &::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: $white-background;
+    }
+
+    &:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: $white-background;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: $white-background;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $white-background;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    max-height: 500px;
+    min-height: 100px;
+  }
+
+  .honeypot {
+    display: none;
+  }
+
+  .error {
+    border-color: #BF4B4B;
+  }
+
+  .error-message {
+    padding: .5em 1em;
+    font-size: 1em;
+    border: 2px #BF4B4B solid;
+    background: transparent;
   }
 }

@@ -1,3 +1,8 @@
 .idea
 public/
 node_modules/
+/vendor/
+composer.lock
+*.tar.gz
+
+cache/
