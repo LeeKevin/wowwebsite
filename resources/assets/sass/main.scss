@@ -14,7 +14,7 @@ body {
   padding: 0;
   margin: 0;
 
-  .loading {
+  &.loading {
     cursor: wait !important;
   }
 }
@@ -193,7 +193,7 @@ h1, h2 {
   .error-message {
     padding: .5em 1em;
     font-size: 1em;
-    border: 2px #BF4B4B solid;
+    border: 2px #fff solid;
     background: transparent;
   }
 }

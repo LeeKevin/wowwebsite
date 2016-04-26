@@ -22,15 +22,16 @@ module.exports = function () {
                     try {
                         var response = JSON.parse(res);
                         if (response['error']) {
-                            form.find('.error-message').text(response['error']).show();
+                            form.find('.error-message').addClass('error').text(response['error']).show();
                             return;
                         }
+
+                        form.find('.error-message').removeClass('error').text('Thank you! We\'ll get back to you shortly.').show();
                     } catch (e) {
                         console.error(e);
                         return;
                     }
 
-                    console.log(res);
                 }
             });
         },
