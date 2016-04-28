@@ -137,11 +137,12 @@ h1, h2 {
 
 .contact-form {
   position: relative;
-  width: 500px;
   display: block;
   margin: 1em auto;
 
   input, textarea {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
     display: block;
     width: 100%;
     margin: 1em 0;

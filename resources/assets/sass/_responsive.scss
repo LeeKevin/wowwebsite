@@ -20,17 +20,21 @@
   .content {
     flex-direction: column;
     .graphic > img {
-      width: 340px;
+      width: 300px;
     }
 
     .about-us-content {
-      margin-top: 2em;
+      padding: 2em 10px 0 10px;
     }
   }
 }
 
 header, #header {
   text-align: center;
+}
+
+.contact-form {
+  width: 300px;
 }
 
 @media (min-width: 480px) {
@@ -50,9 +54,13 @@ header, #header {
       }
 
       .about-us-content {
-        margin-top: 2em;
+        padding: 2em 10px 0 10px;
       }
     }
+  }
+
+  .contact-form {
+    width: 425px;
   }
 }
 
@@ -81,11 +89,19 @@ header, #header {
           width: 300px;
         }
       }
+
+      .about-us-content {
+        padding: 0 10px;
+      }
     }
   }
 
   header, #header {
     text-align: left;
+  }
+
+  .contact-form {
+    width: 500px;
   }
 }
 
