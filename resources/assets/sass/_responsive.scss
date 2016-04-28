@@ -91,7 +91,7 @@ header, #header {
       }
 
       .about-us-content {
-        padding: 0 10px;
+        padding: 0 20px;
       }
     }
   }
@@ -105,9 +105,24 @@ header, #header {
   }
 }
 
+@media (min-width: 900px) {
+  .content {
+    width: 850px;
+    padding: 0;
+  }
+
+  .about-us {
+    .content {
+      .about-us-content {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .content {
-    width: 900px;
+    width: 975px;
   }
 
   .hero {
